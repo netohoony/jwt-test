@@ -29,7 +29,7 @@ public class LoginFilter extends UsernamePasswordAuthenticationFilter {
         System.out.println("username: " + username);
         System.out.println("password: " + password);
 
-        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, password, null);
+        UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(username, password, null); //role값 null로 진행
 
         return authenticationManager.authenticate(authToken);
     }
